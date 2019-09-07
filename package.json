@@ -1,0 +1,14 @@
+{
+  "name": "trips",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rui Carneiro <rui.arc@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "marked": "^0.7.0"
+  },
+  "scripts": {
+    "build": "node --experimental-modules ./render.mjs"
+  }
+}
