@@ -20,11 +20,12 @@
     "webpack": "^4.39.3"
   },
   "scripts": {
+    "clean": "rm -rf dist/",
     "copy": "cp -R public/ dist/",
     "build": "node --experimental-modules ./render.mjs",
     "serve": "node_modules/.bin/http-server dist/",
     "webpack": "node_modules/.bin/webpack",
-    "start": "yarn copy && yarn build && yarn webpack && yarn serve",
+    "start": "yarn clean && yarn copy && yarn build && yarn webpack && yarn serve",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   }
 }
