@@ -49,7 +49,8 @@ function extractMetadata(filename) {
 
   return {
     date,
-    title
+    title,
+    filename
   };
 }
 /**

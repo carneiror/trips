@@ -29291,17 +29291,25 @@ if (false) {} else {
 /*!*********************!*\
   !*** ./src/App.jsx ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var App = function App() {
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
   var list = window.index.map(function (_ref) {
     var date = _ref.date,
-        title = _ref.title;
-    return React.createElement("li", null, date, ": ", title);
+        title = _ref.title,
+        filename = _ref.filename;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, date, ": ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: filename + ".html"
+    }, title));
   });
-  return React.createElement(React.Fragment, null, React.createElement("div", null, "This will be an awesome application... one day"), React.createElement("ul", null, list));
-};
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This will be an awesome application... one day"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, list));
+});
 
 /***/ }),
 
@@ -29319,11 +29327,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.jsx */ "./src/App.jsx");
-/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_jsx__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2___default.a, null), document.querySelector("#root"));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.querySelector("#root"));
 
 /***/ })
 

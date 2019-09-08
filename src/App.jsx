@@ -1,8 +1,10 @@
-const App = () => {
-  const list = window.index.map(({ date, title }) => {
+import React from "react";
+
+export default () => {
+  const list = window.index.map(({ date, title, filename }) => {
     return (
       <li>
-        {date}: {title}
+        {date}: <a href={filename + ".html"}>{title}</a>
       </li>
     );
   });
