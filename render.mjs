@@ -4,7 +4,7 @@ import { promisify } from "util";
 
 // Config
 const INPUT_FOLDER = "./posts";
-const OUTPUT_FOLDER = "./target";
+const OUTPUT_FOLDER = "./dist";
 const LEXER_FOLDER = "./lexer";
 
 // Better support for await/async
@@ -33,10 +33,7 @@ async function writeIndex(json) {
 
   const withScripts = content
     .toString()
-    .replace(
-      "<!-- INDEX -->",
-      `<script>window.index = ${JSON.stringify(json)}</script>`
-    );
+    .replace("<!-- INDEX -->", `<script>window.index = ${JSON.stringify(json)}</script>`);
 
   await writeFile(filePath, withScripts);
 }

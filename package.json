@@ -11,10 +11,10 @@
     "react": "^16.9.0"
   },
   "scripts": {
-    "copy": "cp -R site/ target/",
+    "copy": "cp -R site/ dist/",
     "build": "node --experimental-modules ./render.mjs",
     "serve": "node_modules/.bin/http-server target/",
     "start": "yarn copy && yarn build && yarn serve",
-    "gh-pages": "git subtree push --prefix target origin gh-pages"
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   }
 }
