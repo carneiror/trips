@@ -100,7 +100,6 @@ async function main() {
 
   // Write index
   const index = await Promise.all(promises);
-  console.log("CENAS", index);
   await writeIndex(index);
 }
 

@@ -85,3 +85,18 @@ img::-moz-selection {
   color: #fff;
   background: transparent;
 }
+
+/* Temporary CSS */
+section {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px 20px 0 0;
+  float: left;
+}
+section img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}

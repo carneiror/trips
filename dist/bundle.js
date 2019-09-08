@@ -29303,10 +29303,13 @@ __webpack_require__.r(__webpack_exports__);
   var list = window.index.map(function (_ref) {
     var date = _ref.date,
         title = _ref.title,
-        filename = _ref.filename;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, date, ": ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: filename + ".html"
-    }, title));
+        filename = _ref.filename,
+        image = _ref.image;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: filename
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: image
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, date)));
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This will be an awesome application... one day"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, list));
 });

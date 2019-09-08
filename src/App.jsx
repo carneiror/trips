@@ -1,11 +1,15 @@
 import React from "react";
 
 export default () => {
-  const list = window.index.map(({ date, title, filename }) => {
+  const list = window.index.map(({ date, title, filename, image }) => {
     return (
-      <li>
-        {date}: <a href={filename + ".html"}>{title}</a>
-      </li>
+      <section>
+        <a href={filename}>
+          <img src={image} />
+          <h2>{title}</h2>
+          <i>{date}</i>
+        </a>
+      </section>
     );
   });
 
