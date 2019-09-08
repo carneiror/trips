@@ -52,14 +52,26 @@ async function writeIndex(json) {
  *
  * @param filename Example `12-05-2014-Porto.md`
  */
-function extractMetadata(filename) {
+function extractMetadata(filename, lexer) {
   const date = filename.substring(0, 10); // e.g. 01-01-1970
   const title = filename.substring(11, filename.length - 3); // e.g. Tanzania
+  const regex = /.*\((.*(jpg|png))\)/;
+  let image = null;
+
+  lexer.find(({ text }) => {
+    const result = text && text.match(regex);
+
+    if (result) {
+      image = result[1];
+      return true;
+    }
+  });
 
   return {
     date,
     title,
-    filename
+    filename,
+    image
   };
 }
 /**
@@ -76,15 +88,14 @@ async function main() {
     const inputFile = `${INPUT_FOLDER}/${filename}`;
     const markdown = await readFile(inputFile);
     const html = marked(markdown.toString());
-    const json = marked.lexer(markdown.toString());
+    const lexer = marked.lexer(markdown.toString());
 
     // Write the HTML and JSON
     console.log(`Creating files for "${inputFile}"`);
     await writeFile(`${OUTPUT_FOLDER}/${filename}.html`, html);
-    await writeFile(`${LEXER_FOLDER}/${filename}.json`, JSON.stringify(json));
 
     // Add to index
-    return extractMetadata(filename);
+    return extractMetadata(filename, lexer);
   });
 
   // Write index
