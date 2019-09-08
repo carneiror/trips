@@ -1,4 +1,5 @@
 import marked from "marked";
+import path from "path";
 import fs from "fs";
 import { promisify } from "util";
 
@@ -12,6 +13,14 @@ const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const mkdir = promisify(fs.mkdir);
+const lstat = promisify(fs.lstat);
+
+/**
+ * Filter to match all markdown files
+ */
+function isMarkdown(filename) {
+  return path.extname(filename) === ".md";
+}
 
 /**
  * Create output folder
@@ -63,7 +72,7 @@ async function main() {
   await createFolder(OUTPUT_FOLDER);
   await createFolder(LEXER_FOLDER);
 
-  const promises = files.map(async filename => {
+  const promises = files.filter(isMarkdown).map(async filename => {
     const inputFile = `${INPUT_FOLDER}/${filename}`;
     const markdown = await readFile(inputFile);
     const html = marked(markdown.toString());

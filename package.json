@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist/",
-    "copy": "cp -R public/ dist/",
+    "copy": "cp -R public/ dist/ && cp -R posts/images dist/images",
     "build": "node --experimental-modules ./render.mjs",
     "serve": "node_modules/.bin/http-server dist/",
     "webpack": "node_modules/.bin/webpack",
