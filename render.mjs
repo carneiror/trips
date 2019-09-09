@@ -2,7 +2,7 @@ import marked from "marked";
 import path from "path";
 import fs from "fs";
 import { promisify } from "util";
-import CONFIG from "./config.mjs";
+import CONFIG from "./config.cjs";
 
 // Environment running: prod or dev
 const NODE_ENV = process.env.NODE_ENV;
