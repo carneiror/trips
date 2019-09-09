@@ -22,15 +22,17 @@
     "webpack-cli": "^3.3.8"
   },
   "scripts": {
-    "clean": "rm -rf dist/",
-    "copy": "cp -R public/ dist/ && cp -R posts/images dist/images",
+    "clean:prod": "rm -rf dist/",
+    "clean:dev": "rm -rf target/",
+    "copy:prod": "cp -R public/ dist/ && cp -R posts/images dist/images",
+    "copy:dev": "cp -R public/ target/ && cp -R posts/images target/images",
     "build:markdown": "node --experimental-modules ./render.mjs",
     "build:application": "node_modules/.bin/webpack",
-    "build": "run-s clean copy build:*",
-    "serve": "node_modules/.bin/http-server dist/",
-    "start": "run-s build serve",
+    "build": "run-s build:*",
+    "serve": "node_modules/.bin/http-server target/",
     "commit": "git add . && git commit -m \"Updated build\"",
     "push": "git subtree push --prefix dist origin gh-pages",
-    "deploy": "run-s build commit push"
+    "start": "cross-env NODE_ENV=dev run-s clean:dev copy:dev build serve",
+    "deploy": "cross-env NODE_ENV=prod run-s clean:prod copy:prod build commit push"
   }
 }
