@@ -77,7 +77,7 @@ function extractMetadata(filename, lexer) {
   return {
     date,
     title,
-    filename,
+    filename: `${filename}.html`,
     image: `${BASE_URL}/${image}`
   };
 }
