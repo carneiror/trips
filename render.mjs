@@ -64,7 +64,9 @@ function extractMetadata(filename, lexer) {
   const title = filename.substring(11, filename.length - 3); // e.g. Tanzania
   const regex = /.*\((.*(jpg|png))\)/;
   let image = null;
+  let summary = null;
 
+  // Find first image
   lexer.find(({ text }) => {
     const result = text && text.match(regex);
 
@@ -74,13 +76,23 @@ function extractMetadata(filename, lexer) {
     }
   });
 
+  // Find first text
+  lexer.find(({ text, type }) => {
+    if (type === "paragraph") {
+      summary = text;
+      return true;
+    }
+  });
+
   return {
     date,
     title,
     filename: `${filename}.html`,
-    image: `${BASE_URL}/${image}`
+    image: `${BASE_URL}/${image}`,
+    summary
   };
 }
+
 /**
  * Main block
  */

@@ -31,20 +31,13 @@ export default () => {
           </div>
         </div>
       </nav>
-      <header class="masthead">
-        <div class="overlay"></div>
+
+      <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-              <div class="post-heading">
-                <h1>Man must explore, and this is exploration at its greatest</h1>
-                <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                <span class="meta">Posted on August 24, 2019</span>
-              </div>
-            </div>
-          </div>
+          <h1 class="display-4">Fluid jumbotron</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
-      </header>
+      </div>
     </>
   );
 };
