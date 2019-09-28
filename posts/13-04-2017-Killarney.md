@@ -4,7 +4,7 @@ Two of the most beautiful circuits to make in Ireland are the Dingle Peninsula a
 
 Both the Dingle Peninsula and the Ring of Kerry are, in fact, peninsulas in the southern-west part of Ireland. The Ring of Kerry, however, is much larger than the Dingle Peninsula.
 
-It's also a great origin spot to visit the Blarney Castle and its gardens as well as Cashel Rock. We actually visited the Blarney Castle while staying at Killarney but visited the [Cashel Rock](trips/13-04-2017-Cork.md#cashel-rock) on our way to [Cork]](trips/13-04-2017-Cork.md).
+It's also a great origin spot to visit the Blarney Castle and its gardens as well as Cashel Rock. We actually visited the Blarney Castle while staying at Killarney but visited the [Rock of Cashel](trips/13-04-2017-Cork.md#rock-of-cashel) on our way to [Cork](trips/13-04-2017-Cork.md).
 
 ## Saint Mary's Cathedral
 Even though people usually stay in Killarney because it's a great spot to access all its surroundings, the city itself, though small, also has some nice features of its own. One of these is Saint Mary's Cathedral. It's more like a church than a cathedral, but it's quite nice and easily visitable within half an hour. We stopped here before leaving Killarney to visit the Blarney Castle.
